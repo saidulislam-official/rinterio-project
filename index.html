@@ -21,12 +21,82 @@
                 font-family: "Manrope", sans-serif;
             }
         </style>
+        <!-- custom script for tailwind -->
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    clifford: '#da373d',
+                    'primary-icon-color': 'rgba(171, 239, 95, 1)',
+                    'nav-text-color-1': '#494949',
+                    ' class="text-nav-text-color-2"': '#737373',
+                  }
+                }
+              }
+            }
+          </script>
     </head>
     <body class="font-manrope">
         <!-- header section -->
-        <header>
+        <header class="container mx-auto mt-2">
             <!-- nav section -->
-             <h3 class="text-6xl	">Hi, I am Tailwind</h3>
+             <nav>
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                      <div>
+                        <a class="btn btn-ghost text-xl">
+                            <i class="fa-solid fa-arrow-right -rotate-45 bg-primary-icon-color  p-2  rounded-full"></i>
+                            Rinterio
+                        </a>
+                      </div>
+                    </div>
+                    <div class="navbar-center hidden lg:flex">
+                      <ul class="menu menu-horizontal px-1">
+                        <li><a class="text-nav-text-color-1 font-bold">Home</a></li>
+                          <li><a class="text-nav-text-color-2">Services</a></li>
+                          <li><a class="text-nav-text-color-2">Portfolio</a></li>
+                          <li><a class="text-nav-text-color-2">Blogs</a></li>
+                          <li><a class="text-nav-text-color-2">Contact Us</a></li>
+                      </ul>
+                    </div>
+                    <div class="navbar-end">
+                        <div class="flex  items-center gap-4">
+                            <i class="fa-solid fa-magnifying-glass border p-2 rounded-full "></i>
+                            <i class="fa-solid fa-cart-shopping border p-2 rounded-full "></i>
+                            <a class="btn hidden lg:flex bg-primary-icon-color font-bold text-xl rounded-2xl ">
+                                Book Consult
+                                <i class="fa-solid fa-arrow-right -rotate-45 bg-black text-white  p-2  rounded-full"></i>
+                            </a>
+                        </div>
+                      <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4 6h16M4 12h8m-8 6h16" />
+                          </svg>
+                        </div>
+                        <ul
+                          tabindex="0"
+                          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow right-10">
+                          <li><a class="text-nav-text-color-1 font-bold">Home</a></li>
+                          <li><a class="text-nav-text-color-2">Services</a></li>
+                          <li><a class="text-nav-text-color-2">Portfolio</a></li>
+                          <li><a class="text-nav-text-color-2">Blogs</a></li>
+                          <li><a class="text-nav-text-color-2">Contact Us</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+             </nav>
             <!-- nav section end -->
         </header>
     </body>
